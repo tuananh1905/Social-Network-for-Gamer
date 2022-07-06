@@ -1,0 +1,271 @@
+/*
+            To change this license header, choose License Headers in Project Properties.
+            To change this template file, choose Tools | Templates
+            and open the template in the editor.
+            */
+            /* 
+                Created on : 27/05/2022, 7:22:51 AM
+                Author     : duynh
+            */
+            body{
+                background-color: #212A37;
+            }
+            /*Profile container*/
+            .display-Profile{
+                grid-area: Profiles;
+                position: relative ;
+                display: block;
+                width: 450px;
+                height:350px;
+                background: #111720;
+                float:left;
+                border-radius: 25px;
+                top:70px;
+                right:100px;
+            }
+            
+            /*Product container*/
+            .display-product{
+                grid-area:Products;
+                position: relative ;
+                display: block;
+                width: 450px;
+                height:350px;
+                background: #111720;
+                float:left;
+                border-radius: 25px;
+                top:90px;
+                right:95px;
+            }
+            
+            
+            /*Post container*/
+            .display-post{
+                grid-area:Posts;
+                position: relative;
+                display: block;
+                width: 500px;
+                height:auto;        
+                top: 70px;
+                right:50px;
+                background:#111720;
+                border-radius: 25px;
+
+            }
+            
+            /*Game container*/
+            .display-game{
+                grid-area:Games;
+                position: relative;
+                display: block;
+                width: 450px;
+                height:350px;
+                right:15px;
+                top: 70px;
+                background: #111720;
+                float:right;
+                border-radius: 25px;
+            }
+            
+            /*Friend container*/
+            .display-friend{
+                grid-area:Friends;
+                position: relative;
+                display: block;
+                width: 450px;
+                height:350px;
+                top:85px;
+                right: 15px;
+                background: #111720;
+                float:right;
+                border-radius: 25px;
+            }
+
+            /*view User container*/
+            .container{
+                display: grid;
+                width: 100%;
+                grid-template-column: repeat(3,1fr);
+                grid-template-row:auto;
+                gap:5px;
+                grid-template-areas:
+                    "Profiles Posts Games"
+                    "Profiles Posts Games"
+                    "Products Posts Friends"
+                    "Products Posts Friends"
+                    ".  Posts ."
+                    ".  Posts ."
+                    ".  Posts ."
+                    ".  Posts ."
+                    ".  Posts ."
+                    ;
+            }
+
+
+
+            .userinfo{
+                display: flex; 
+                align-content: center;
+                float: left;
+                padding-right:10%;
+                border-radius: 25px;
+
+            }
+
+            .userinfo .infono1{
+                display: block;
+                height: 10%;
+                width: 100%;
+                border-radius: 15px;
+                margin-top: 10px;
+            }
+
+            .userinfo .infono1 h4{
+                color:white;
+                font-family: sans-serif;
+                font-weight: 100;
+
+            }
+
+            .profile-container{
+                float:right;
+                margin-right: 10%;
+                margin-top: 5%;
+
+            }
+
+            .display-Profile .user-Avatar .user-pic{
+                display: block;
+                position: relative;
+                float: left;
+                margin-top: 18%;
+                margin-left: 6%;
+                margin-right: 5%;
+                overflow-x: hidden;
+                border-radius: 50%;
+                width: 150px;
+                height: 150px;
+            }
+            .display-Profile .user-Avatar .user-pic img{
+                object-fit: contain;
+                height: 100%;
+                width: 100%;
+                cursor: pointer;
+
+            }
+            .display-friend .friendPic{
+                display: block;
+                position: relative;
+                float: left;
+                margin-top: 20%;
+                margin-left: 10%;
+                margin-right: 5%;
+                overflow-x: hidden;
+                border-radius: 50%;
+                width: 100x;
+                height: 100px;
+            }
+
+
+            .display-friend .friendPic img{
+                object-fit: contain;
+                height: 100%;
+                width: 100%;
+
+            }
+
+            .display-game .display-title{
+                margin-top: 10px;
+                margin-left: 20px;
+                font-weight: bold;
+                font-family: sans-serif;
+                color:white;
+            }
+
+
+            .display-Profile .user-pic input[type = file]{
+                -webkit-user-select: none;
+                display: inline-block;
+                outline: none;
+                font-weight: 700;
+                font-size: 10pt;
+
+            }
+            .display-friend .friend-title{
+                margin-top: 10px;
+                margin-left: 20px;
+                font-weight: bold;
+                font-family: sans-serif;
+                color:white;
+            }
+
+            .display-friend .friend-container{
+                display: inline-block;
+                position: relative;
+                margin-right: 10px;
+
+            }
+
+
+            .display-friend .friend-container .friendPic{
+                display:inline;
+                position: relative;
+                margin-top: 20px;
+                margin-left: 20px;
+            }
+            .display-friend .friend-container .friendname{
+                display: block;
+                text-align: center;
+                color:white;
+
+            }
+            .display-friend .seeMore{
+                float:right;
+                margin-right: 20px;
+                margin-top: 10px;
+
+            }
+
+            .display-friend .seeMore a{
+                text-decoration: none;
+                display: block;
+                font-size: 20px;
+            }
+
+            .display-friend .seeMore a:hover{
+                text-decoration: underline;
+                display: block;
+            }
+
+            .display-game .game-container{
+                display: inline-block;
+                position: relative;
+                margin-right: 10px;
+
+            }
+
+
+            .display-game .game-container .gamePic{
+                display:inline;
+                position: relative;
+                margin-top: 20px;
+                margin-left: 20px;
+            }
+            .display-game .game-container .gamename{
+                display: block;
+                text-align: center;
+                color:white;
+            }
+             .display-game .gamePic img{
+                object-fit: contain;
+                height: 100%;
+                width: 100%;
+
+            }
+            
+            .display-Profile .user-pic .user-pic-UpdateTable{
+                display: relative;
+                border-radius: 25px;
+                background-color:white;
+            }
+            
